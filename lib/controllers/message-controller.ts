@@ -20,7 +20,7 @@ export class MessageController {
                     ID: message._id,
                     Name: message.Name,
                     Email: message.Email,
-                    Phone: message.Phone,
+                    Subject: message.Subject,
                     Message: message.Message,
                     IsRead: message.IsRead
                 };
@@ -42,7 +42,7 @@ export class MessageController {
                         ID: message._id,
                         Name: message.Name,
                         Email: message.Email,
-                        Phone: message.Phone,
+                        Subject: message.Subject,
                         Message: message.Message,
                         IsRead: message.IsRead
                     } as MessageDTO;
@@ -64,7 +64,7 @@ export class MessageController {
                     ID: message._id,
                     Name: message.Name,
                     Email: message.Email,
-                    Phone: message.Phone,
+                    Subject: message.Subject,
                     Message: message.Message,
                     IsRead: message.IsRead
                 };
@@ -85,7 +85,7 @@ export class MessageController {
                     ID: message._id,
                     Name: message.Name,
                     Email: message.Email,
-                    Phone: message.Phone,
+                    Subject: message.Subject,
                     Message: message.Message,
                     IsRead: message.IsRead
                 };
