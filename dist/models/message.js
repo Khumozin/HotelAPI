@@ -11,7 +11,7 @@ exports.MessageSchema = new Schema({
         type: String,
         required: 'Enter Content'
     },
-    Phone: {
+    Subject: {
         type: String,
         required: 'Enter Icon'
     },

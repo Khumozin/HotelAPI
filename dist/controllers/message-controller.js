@@ -25,7 +25,7 @@ class MessageController {
                         ID: message._id,
                         Name: message.Name,
                         Email: message.Email,
-                        Phone: message.Phone,
+                        Subject: message.Subject,
                         Message: message.Message,
                         IsRead: message.IsRead
                     };
@@ -49,7 +49,7 @@ class MessageController {
                             ID: message._id,
                             Name: message.Name,
                             Email: message.Email,
-                            Phone: message.Phone,
+                            Subject: message.Subject,
                             Message: message.Message,
                             IsRead: message.IsRead
                         };
@@ -73,7 +73,7 @@ class MessageController {
                         ID: message._id,
                         Name: message.Name,
                         Email: message.Email,
-                        Phone: message.Phone,
+                        Subject: message.Subject,
                         Message: message.Message,
                         IsRead: message.IsRead
                     };
@@ -96,7 +96,7 @@ class MessageController {
                         ID: message._id,
                         Name: message.Name,
                         Email: message.Email,
-                        Phone: message.Phone,
+                        Subject: message.Subject,
                         Message: message.Message,
                         IsRead: message.IsRead
                     };
