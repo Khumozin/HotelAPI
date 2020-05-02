@@ -1,0 +1,1 @@
+{"version":3,"file":"gallery-item.js","sourceRoot":"","sources":["../../lib/models/gallery-item.ts"],"names":[],"mappings":";;AAAA,qCAAqC;AAErC,MAAM,MAAM,GAAG,QAAQ,CAAC,MAAM,CAAC;AAElB,QAAA,iBAAiB,GAAG,IAAI,MAAM,CAAC;IACxC,KAAK,EAAE;QACH,IAAI,EAAE,MAAM;QACZ,QAAQ,EAAE,aAAa;KAC1B;IACD,SAAS,EAAE;QACP,IAAI,EAAE,MAAM;KACf;IACD,UAAU,EAAE;QACR,IAAI,EAAE,MAAM;KACf;CACJ,CAAC,CAAC"}
