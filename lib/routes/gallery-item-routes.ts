@@ -14,6 +14,9 @@ export class GalleryItemRoutes {
         app.route('/galleryItem')
             .get(this.galleryItemController.getGalleryItems)
 
+        app.route('/galleryItemByRoomTypeID/:roomTypeId')
+            .get(this.galleryItemController.getGalleryItemWithRoomTypeID)
+
         // get, update, delete a specific galleryItem
         app.route('/galleryItem/:galleryItemId')
             .get(this.galleryItemController.getGalleryItemWithID)

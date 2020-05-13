@@ -69,6 +69,25 @@ export class GalleryItemController {
         });
     }
 
+    public async getGalleryItemWithRoomTypeID(req: Request, res: Response) {
+        await GalleryItem.find({ RoomTypeID: req.params.roomTypeId }, (err, galleryItem) => {
+            if (err) {
+                res.send(err);
+            }
+            if (galleryItem) {
+                const result: GalleryItemDTO = {
+                    ID: galleryItem[0]._id,
+                    Title: galleryItem[0].Title,
+                    Thumbnail: galleryItem[0].Thumbnail,
+                    RoomTypeID: galleryItem[0].RoomTypeID
+                };
+                res.status(200).json(result);
+            } else {
+                res.status(204).send('No Content');
+            }
+        });
+    }
+
     public async updateGalleryItem(req: Request, res: Response) {
         await GalleryItem.findOneAndUpdate({ _id: req.params.galleryItemId }, req.body, { new: true }, (err, galleryItem) => {
             if (err) {

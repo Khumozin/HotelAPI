@@ -18,7 +18,9 @@ export class RoomTypeController {
             if (roomType) {
                 const result: RoomTypeDTO = {
                     ID: roomType._id,
-                    Title: roomType.Title
+                    Title: roomType.Title,
+                    NumberOfRooms: roomType.NumberOfRooms,
+                    AvailableRooms: roomType.AvailableRooms
                 };
                 res.status(201).json(result);
             } else {
@@ -36,7 +38,9 @@ export class RoomTypeController {
                 const results: RoomTypeDTO[] = roomType.map(roomType => {
                     return {
                         ID: roomType._id,
-                        Title: roomType.Title
+                        Title: roomType.Title,
+                        NumberOfRooms: roomType.NumberOfRooms,
+                        AvailableRooms: roomType.AvailableRooms
                     } as RoomTypeDTO;
                 });
                 res.status(200).json(results);
@@ -54,7 +58,9 @@ export class RoomTypeController {
             if (roomType) {
                 const result: RoomTypeDTO = {
                     ID: roomType._id,
-                    Title: roomType.Title
+                    Title: roomType.Title,
+                    NumberOfRooms: roomType.NumberOfRooms,
+                    AvailableRooms: roomType.AvailableRooms
                 };
                 res.status(200).json(result);
             } else {
@@ -71,7 +77,9 @@ export class RoomTypeController {
             if (roomType) {
                 const result: RoomTypeDTO = {
                     ID: roomType._id,
-                    Title: roomType.Title
+                    Title: roomType.Title,
+                    NumberOfRooms: roomType.NumberOfRooms,
+                    AvailableRooms: roomType.AvailableRooms
                 };
                 res.status(200).json(result);
             } else {

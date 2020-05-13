@@ -8,7 +8,7 @@ exports.GalleryItemDetailsSchema = new Schema({
         required: 'Enter GalleryItemID'
     },
     Price: {
-        type: String
+        type: Number
     },
     Content: {
         type: String

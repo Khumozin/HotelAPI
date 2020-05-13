@@ -9,13 +9,44 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+const dotenv = require("dotenv");
 const mongoose = require("mongoose");
+const nodemailer = require("nodemailer");
 const message_1 = require("../models/message");
 const Message = mongoose.model('Message', message_1.MessageSchema);
+dotenv.config();
 class MessageController {
     addNewMessage(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             let newMessage = new Message(req.body);
+            const transporter = yield nodemailer.createTransport({
+                service: 'gmail',
+                auth: {
+                    user: process.env.EMAIL_USER,
+                    pass: process.env.EMAIL_PASS
+                },
+                tls: {
+                    // https://github.com/nodemailer/nodemailer/issues/406#issuecomment-83941225
+                    rejectUnauthorized: false
+                }
+            });
+            const body = {
+                from: process.env.EMAIL_USER,
+                to: req.body.Email,
+                subject: 'Hotel Enquiries',
+                html: `<p>Hi ${req.body.Name},</p>
+                    <br>
+                    <p>Thanks for contacting us.</p>`
+            };
+            let info = yield transporter.sendMail(body, (err, res) => {
+                if (err) {
+                    console.log(err);
+                    return false;
+                }
+                if (res) {
+                    console.log(res);
+                }
+            });
             yield newMessage.save((err, message) => {
                 if (err) {
                     res.send(err);

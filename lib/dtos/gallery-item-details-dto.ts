@@ -1,6 +1,6 @@
 export class GalleryItemDetailsDTO {
     ID: string;
     GalleryItemID: string;
-    Price: string;
+    Price: number;
     Content: string;
 }

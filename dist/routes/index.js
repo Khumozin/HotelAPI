@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const amenity_routes_1 = require("./amenity-routes");
+const booking_route_1 = require("./booking-route");
 const gallery_item_details_routes_1 = require("./gallery-item-details-routes");
 const gallery_item_feature_routes_1 = require("./gallery-item-feature-routes");
 const gallery_item_image_routes_1 = require("./gallery-item-image-routes");
@@ -16,6 +17,7 @@ class AppRoutes {
         this.galleryItemImageRoutes = new gallery_item_image_routes_1.GalleryItemImageRoutes();
         this.roomTypeRoutes = new room_type_router_1.RoomTypeRoutes();
         this.messageRoutes = new message_routes_1.MessageRoutes();
+        this.bookingRoutes = new booking_route_1.BookingRoutes();
     }
     approutes(app) {
         this.amenityRoutes.routes(app);
@@ -25,6 +27,7 @@ class AppRoutes {
         this.galleryItemImageRoutes.routes(app);
         this.roomTypeRoutes.routes(app);
         this.messageRoutes.routes(app);
+        this.bookingRoutes.routes(app);
     }
 }
 exports.AppRoutes = AppRoutes;
