@@ -1,6 +1,7 @@
 import * as express from 'express';
 
 import { AmenityRoutes } from './amenity-routes';
+import { BookingRoutes } from './booking-route';
 import { GalleryItemDetailsRoutes } from './gallery-item-details-routes';
 import { GalleryItemFeatureRoutes } from './gallery-item-feature-routes';
 import { GalleryItemImageRoutes } from './gallery-item-image-routes';
@@ -17,6 +18,7 @@ export class AppRoutes {
     private galleryItemImageRoutes: GalleryItemImageRoutes = new GalleryItemImageRoutes();
     private roomTypeRoutes: RoomTypeRoutes = new RoomTypeRoutes();
     private messageRoutes: MessageRoutes = new MessageRoutes();
+    private bookingRoutes: BookingRoutes = new BookingRoutes();
 
     public approutes(app: express.Application) {
         this.amenityRoutes.routes(app);
@@ -26,6 +28,7 @@ export class AppRoutes {
         this.galleryItemImageRoutes.routes(app);
         this.roomTypeRoutes.routes(app);
         this.messageRoutes.routes(app);
+        this.bookingRoutes.routes(app);
     }
 
 }

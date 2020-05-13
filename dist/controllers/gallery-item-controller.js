@@ -79,6 +79,27 @@ class GalleryItemController {
             });
         });
     }
+    getGalleryItemWithRoomTypeID(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            yield GalleryItem.find({ RoomTypeID: req.params.roomTypeId }, (err, galleryItem) => {
+                if (err) {
+                    res.send(err);
+                }
+                if (galleryItem) {
+                    const result = {
+                        ID: galleryItem[0]._id,
+                        Title: galleryItem[0].Title,
+                        Thumbnail: galleryItem[0].Thumbnail,
+                        RoomTypeID: galleryItem[0].RoomTypeID
+                    };
+                    res.status(200).json(result);
+                }
+                else {
+                    res.status(204).send('No Content');
+                }
+            });
+        });
+    }
     updateGalleryItem(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             yield GalleryItem.findOneAndUpdate({ _id: req.params.galleryItemId }, req.body, { new: true }, (err, galleryItem) => {

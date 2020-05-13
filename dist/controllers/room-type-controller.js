@@ -23,7 +23,9 @@ class RoomTypeController {
                 if (roomType) {
                     const result = {
                         ID: roomType._id,
-                        Title: roomType.Title
+                        Title: roomType.Title,
+                        NumberOfRooms: roomType.NumberOfRooms,
+                        AvailableRooms: roomType.AvailableRooms
                     };
                     res.status(201).json(result);
                 }
@@ -43,7 +45,9 @@ class RoomTypeController {
                     const results = roomType.map(roomType => {
                         return {
                             ID: roomType._id,
-                            Title: roomType.Title
+                            Title: roomType.Title,
+                            NumberOfRooms: roomType.NumberOfRooms,
+                            AvailableRooms: roomType.AvailableRooms
                         };
                     });
                     res.status(200).json(results);
@@ -63,7 +67,9 @@ class RoomTypeController {
                 if (roomType) {
                     const result = {
                         ID: roomType._id,
-                        Title: roomType.Title
+                        Title: roomType.Title,
+                        NumberOfRooms: roomType.NumberOfRooms,
+                        AvailableRooms: roomType.AvailableRooms
                     };
                     res.status(200).json(result);
                 }
@@ -82,7 +88,9 @@ class RoomTypeController {
                 if (roomType) {
                     const result = {
                         ID: roomType._id,
-                        Title: roomType.Title
+                        Title: roomType.Title,
+                        NumberOfRooms: roomType.NumberOfRooms,
+                        AvailableRooms: roomType.AvailableRooms
                     };
                     res.status(200).json(result);
                 }
